@@ -735,23 +735,13 @@
             margin-bottom: 5px;
         }
         .cf-form-group input,
-        .cf-form-group textarea,
-        .cf-form-group select {
+        .cf-form-group textarea {
             padding: 12px;
             font-size: 16px;
             border: 1px solid #ccc;
             border-radius: 8px;
             background: #fff;
             box-sizing: border-box;
-            width: 100%;
-        }
-        .cf-form-group select {
-            cursor: pointer;
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 12px center;
-            padding-right: 36px;
         }
         .cf-form-group textarea {
             resize: vertical;
@@ -1788,7 +1778,12 @@
                     <form id="cfContactForm" class="cf-contact-form">
                         <div class="cf-form-group"><label for="cfName">Name *</label><input type="text" id="cfName" name="from_name" placeholder="John Doe" required></div>
                         <div class="cf-form-group"><label for="cfEmail">Email *</label><input type="email" id="cfEmail" name="user_email" placeholder="john@example.com" required></div>
-                        <div class="cf-form-group"><label for="cfSubject">Appliance Type *</label><select id="cfSubject" name="subject" required><option value="" disabled selected>Select Appliance...</option><option value="Bosch Washer Repair">Bosch Washer</option><option value="Bosch Dryer Repair">Bosch Dryer</option><option value="Bosch Refrigerator Repair">Bosch Refrigerator</option><option value="Bosch Dishwasher Repair">Bosch Dishwasher</option><option value="Bosch Oven/Range Repair">Bosch Oven/Range</option><option value="Bosch Cooktop Repair">Bosch Cooktop</option><option value="Bosch Microwave Repair">Bosch Microwave</option><option value="Bosch Freezer Repair">Bosch Freezer</option><option value="Other Bosch Appliance">Other</option></select></div>
+                        <input type="hidden" name="reply_to" id="cfReplyTo">
+                        <input type="hidden" name="email" id="cfEmailHidden">
+                        <input type="hidden" name="from_email" id="cfFromEmail">
+                        <input type="hidden" name="customer_email" id="cfCustomerEmail">
+                        <input type="hidden" name="appliance_type" id="cfApplianceType">
+                        <div class="cf-form-group"><label for="cfSubject">Appliance Type *</label><select id="cfSubject" name="subject" required style="padding:12px;font-size:16px;border:1px solid #ccc;border-radius:8px;background:#fff;box-sizing:border-box;width:100%;cursor:pointer;appearance:none;background-image:url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%2712%27 viewBox=%270 0 12 12%27%3E%3Cpath fill=%27%23333%27 d=%27M6 8L1 3h10z%27/%3E%3C/svg%3E');background-repeat:no-repeat;background-position:right 12px center;padding-right:36px;"><option value="" disabled selected>Select Appliance...</option><option value="Bosch Washer Repair">Bosch Washer</option><option value="Bosch Dryer Repair">Bosch Dryer</option><option value="Bosch Refrigerator Repair">Bosch Refrigerator</option><option value="Bosch Dishwasher Repair">Bosch Dishwasher</option><option value="Bosch Oven/Range Repair">Bosch Oven/Range</option><option value="Bosch Cooktop Repair">Bosch Cooktop</option><option value="Bosch Microwave Repair">Bosch Microwave</option><option value="Bosch Freezer Repair">Bosch Freezer</option><option value="Bosch Wine Cooler Repair">Bosch Wine Cooler</option><option value="Other Bosch Appliance">Other</option></select></div>
                         <div class="cf-form-group"><label for="cfPhone">Phone *</label><input type="tel" id="cfPhone" name="phone" placeholder="1234567890" required pattern="[0-9]{10}"></div>
                         <div class="cf-form-group"><label for="cfAddress">Address *</label><textarea id="cfAddress" name="address" placeholder="123 Main St, Manhattan, NY 10001" required></textarea></div>
                         <div class="cf-form-group"><label for="cfMessage">Describe the Problem *</label><textarea id="cfMessage" name="message" placeholder="Please describe the issue you're experiencing with your Bosch appliance..." required></textarea></div>
@@ -2049,6 +2044,12 @@
                 cfContactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     const email = this.user_email.value.trim();
+                    // Copy email to hidden fields for template compatibility
+                    document.getElementById('cfReplyTo').value = email;
+                    document.getElementById('cfEmailHidden').value = email;
+                    document.getElementById('cfFromEmail').value = email;
+                    document.getElementById('cfCustomerEmail').value = email;
+                    document.getElementById('cfApplianceType').value = this.subject.value;
                     if (typeof emailjs !== 'undefined') {
                         emailjs.sendForm('service_emxksio', 'template_tmexlql', this)
                             .then(function() {
