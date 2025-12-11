@@ -225,7 +225,8 @@
             font-size: 18px;
         }
         .submenu-toggle:hover:after { transform: rotate(90deg); }
-        .additional-submenu, .service-areas-submenu {
+        .additional-submenu,
+        .service-areas-submenu {
             max-height: 0;
             overflow-y: auto;
             transition: max-height 0.8s ease;
@@ -236,7 +237,8 @@
             white-space: normal;
             -webkit-overflow-scrolling: touch;
         }
-        .additional-submenu li, .service-areas-submenu li {
+        .additional-submenu li,
+        .service-areas-submenu li {
             padding: 20px 44px;
             color: #eee;
             font-size: 17px;
@@ -246,8 +248,10 @@
             box-sizing: border-box;
             cursor: pointer;
         }
-        .additional-submenu li:hover, .additional-submenu li:active,
-        .service-areas-submenu li:hover, .service-areas-submenu li:active {
+        .additional-submenu li:hover,
+        .additional-submenu li:active,
+        .service-areas-submenu li:hover,
+        .service-areas-submenu li:active {
             background: var(--red);
             color: white;
             padding-left: 54px;
@@ -262,7 +266,8 @@
             cursor: pointer;
             pointer-events: auto;
         }
-        .service-areas-submenu li:hover a, .service-areas-submenu li:active a { color: white; }
+        .service-areas-submenu li:hover a,
+        .service-areas-submenu li:active a { color: white; }
         .hero {
             position: relative;
             color: white;
@@ -449,10 +454,296 @@
             font-size: 15px;
             box-sizing: border-box;
         }
-        .service-types li:hover, .service-types li:active {
+        .service-types li:hover,
+        .service-types li:active {
             background: var(--red);
             color: white;
         }
+        /* Service Areas Section Styles */
+        #sa-service-areas {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: transparent;
+            border: 2px solid #808080;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+            margin: 0 auto 3rem;
+            padding: 20px;
+            position: relative;
+            box-sizing: border-box;
+        }
+        #sa-service-areas h2 {
+            font-size: 34px;
+            text-align: center;
+            color: inherit;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+            transition: transform .3s, color .3s;
+        }
+        #sa-service-areas p {
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+        }
+        .sa-dropdown-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .sa-dropdown-button {
+            padding: 14px 32px;
+            border: none;
+            background: linear-gradient(45deg, #003087, #0052cc);
+            color: #fff;
+            font-weight: 600;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all .3s;
+            box-shadow: 0 4px 15px rgba(0, 48, 135, .4);
+            box-sizing: border-box;
+        }
+        .sa-dropdown-button:hover {
+            background: linear-gradient(45deg, #002266, #003f99);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 48, 135, .6);
+        }
+        .sa-dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .5s;
+            background: transparent;
+            box-sizing: border-box;
+        }
+        .sa-slide ul {
+            background: rgba(255, 255, 255, .95);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
+            transition: transform .3s;
+            box-sizing: border-box;
+            list-style: none;
+            margin: 0;
+            column-gap: 30px;
+            columns: 3;
+        }
+        .sa-slide ul li {
+            padding: 12px 15px;
+            margin: 8px 0;
+            border-radius: 10px;
+            background: rgba(240, 244, 255, .9);
+            transition: all .3s;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+            box-sizing: border-box;
+        }
+        .sa-slide ul li:hover {
+            background: #d4e4ff;
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+        }
+        .sa-slide ul li h3 {
+            margin: 0;
+            font-size: 17px;
+            color: #1e3c72;
+            font-weight: 600;
+        }
+        /* Contact Form Section Styles */
+        #cf-schedule-container {
+            background: transparent;
+            border: 2px solid #808080;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+            padding: 20px;
+            margin: 3rem auto 0;
+            max-width: 1200px;
+            box-sizing: border-box;
+        }
+        .cf-schedule-text {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-size: 1.5rem;
+            color: #2A2A2A;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .cf-book-button {
+            display: block;
+            padding: 12px 20px;
+            background: linear-gradient(45deg, #003087, #00205B);
+            color: #fff;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin: 10px auto;
+            width: 100%;
+            max-width: 220px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s;
+            box-sizing: border-box;
+        }
+        .cf-book-button:hover {
+            background: linear-gradient(45deg, #00205B, #001A45);
+            transform: translateY(-3px);
+        }
+        .form-call-now {
+            display: block;
+            padding: 12px 28px;
+            background: var(--red);
+            color: white;
+            font-weight: 700;
+            border-radius: 6px;
+            font-size: 17px;
+            cursor: pointer;
+            margin: 15px auto 0;
+            width: 100%;
+            max-width: 220px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s;
+            box-sizing: border-box;
+            border: none;
+        }
+        .form-call-now:hover {
+            background: #c41b20;
+            transform: translateY(-3px);
+        }
+        .cf-contact-form-section {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all .6s ease;
+            padding: 0;
+            background: linear-gradient(135deg, #003087 0%, #00205B 50%, #001A45 100%);
+            border-radius: 12px;
+            margin-top: 15px;
+            box-sizing: border-box;
+        }
+        .cf-contact-form-section.active {
+            max-height: 1600px;
+            opacity: 1;
+            padding: 20px;
+        }
+        .expect-text {
+            font-size: .95rem;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .cf-contact-form {
+            background: rgba(255, 255, 255, .95);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            box-sizing: border-box;
+        }
+        .cf-form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .cf-form-group label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 5px;
+        }
+        .cf-form-group input,
+        .cf-form-group textarea {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #fff;
+            box-sizing: border-box;
+        }
+        .cf-form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .cf-form-button {
+            background: linear-gradient(45deg, #003087, #00205B);
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 220px;
+            height: 60px;
+            margin: 20px auto 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s;
+            box-sizing: border-box;
+        }
+        .cf-form-button:hover {
+            background: linear-gradient(45deg, #00205B, #001A45);
+            transform: translateY(-3px);
+        }
+        .cf-success-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        .cf-success-modal.active {
+            display: flex;
+        }
+        .cf-success-content {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
+        }
+        .cf-success-content p {
+            font-size: 20px;
+            font-weight: 600;
+            color: #003087;
+            margin: 0 0 25px;
+            line-height: 1.6;
+        }
+        .cf-close-modal {
+            background: var(--red);
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        .cf-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1999;
+        }
+        .cf-modal-overlay.active {
+            display: block;
+        }
+        /* Footer Styles */
         footer {
             background: #1a1a1a;
             color: #b0b0b0;
@@ -538,6 +829,7 @@
         @media (max-width: 992px) {
             .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
             .footer-bottom-links { justify-content: center; gap: 20px 30px; }
+            .sa-slide ul { columns: 2; }
         }
         @media (max-width: 768px) {
             .footer-grid { grid-template-columns: 1fr; gap: 35px; }
@@ -545,6 +837,7 @@
             .footer-column { text-align: center; }
             .footer-brand { align-items: center; }
             .footer-bottom-links { gap: 15px 25px; }
+            .sa-slide ul { columns: 1; }
         }
         @media (max-width: 480px) {
             .footer-bottom-links { flex-direction: column; gap: 12px; padding: 15px 0; }
@@ -577,6 +870,79 @@
                             <li>Appliance Performance Optimization</li>
                             <li>Smart Appliance Connectivity Support</li>
                             <li>Professional Deep Cleaning Services</li>
+                        </div>
+                        <li class="submenu-toggle" id="serviceAreasToggle">Service Areas</li>
+                        <div class="service-areas-submenu" id="serviceAreasSubmenu">
+                            <li><a href="https://boschbergencounty.com/nj/allendale/">Allendale</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/alpine/">Alpine</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/bergenfield/">Bergenfield</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/bogota/">Bogota</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/carlstadt/">Carlstadt</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/cliffside-park/">Cliffside Park</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/closter/">Closter</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/cresskill/">Cresskill</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/demarest/">Demarest</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/dumont/">Dumont</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/east-rutherford/">East Rutherford</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/edgewater/">Edgewater</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/elmwood-park/">Elmwood Park</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/emerson/">Emerson</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/englewood/">Englewood</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/englewood-cliffs/">Englewood Cliffs</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/fair-lawn/">Fair Lawn</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/fairview/">Fairview</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/fort-lee/">Fort Lee</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/franklin-lakes/">Franklin Lakes</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/garfield/">Garfield</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/glen-rock/">Glen Rock</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/hackensack/">Hackensack</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/harrington-park/">Harrington Park</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/hasbrouck-heights/">Hasbrouck Heights</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/haworth/">Haworth</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/hillsdale/">Hillsdale</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/ho-ho-kus/">Ho-Ho-Kus</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/leonia/">Leonia</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/little-ferry/">Little Ferry</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/lodi/">Lodi</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/lyndhurst/">Lyndhurst</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/mahwah/">Mahwah</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/maywood/">Maywood</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/midland-park/">Midland Park</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/montvale/">Montvale</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/moonachie/">Moonachie</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/new-milford/">New Milford</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/north-arlington/">North Arlington</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/northvale/">Northvale</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/norwood/">Norwood</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/oakland/">Oakland</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/old-tappan/">Old Tappan</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/oradell/">Oradell</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/palisades-park/">Palisades Park</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/paramus/">Paramus</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/park-ridge/">Park Ridge</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/ramsey/">Ramsey</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/ridgefield/">Ridgefield</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/ridgefield-park/">Ridgefield Park</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/ridgewood/">Ridgewood</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/river-edge/">River Edge</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/river-vale/">River Vale</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/rochelle-park/">Rochelle Park</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/rockleigh/">Rockleigh</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/rutherford/">Rutherford</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/saddle-brook/">Saddle Brook</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/saddle-river/">Saddle River</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/south-hackensack/">South Hackensack</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/teaneck/">Teaneck</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/tenafly/">Tenafly</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/teterboro/">Teterboro</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/upper-saddle-river/">Upper Saddle River</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/waldwick/">Waldwick</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/wallington/">Wallington</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/washington-township/">Washington Township</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/westwood/">Westwood</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/woodcliff-lake/">Woodcliff Lake</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/wood-ridge/">Wood-Ridge</a></li>
+                            <li><a href="https://boschbergencounty.com/nj/wyckoff/">Wyckoff</a></li>
                         </div>
                     </ul>
                 </div>
@@ -770,6 +1136,117 @@
             </div>
         </div>
     </section>
+    <section class="alt" id="contact">
+        <div class="container">
+            <section id="sa-service-areas">
+                <h2>Service Areas – All of Bergen County, NJ</h2>
+                <p>We proudly serve <strong>every single town and municipality</strong> in Bergen County with fast, reliable, same-day Bosch appliance repair.</p>
+                <div class="sa-dropdown-container">
+                    <button class="sa-dropdown-button" id="saToggleBtn">View All Bergen County Service Areas</button>
+                    <div class="sa-dropdown-content" id="saDropdownContent">
+                        <div class="sa-slide">
+                            <h2>All Bergen County NJ Towns We Service</h2>
+                            <ul id="townsList">
+                                <li><a href="https://boschbergencounty.com/nj/allendale/"><h3>Allendale</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/alpine/"><h3>Alpine</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/bergenfield/"><h3>Bergenfield</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/bogota/"><h3>Bogota</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/carlstadt/"><h3>Carlstadt</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/cliffside-park/"><h3>Cliffside Park</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/closter/"><h3>Closter</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/cresskill/"><h3>Cresskill</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/demarest/"><h3>Demarest</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/dumont/"><h3>Dumont</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/east-rutherford/"><h3>East Rutherford</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/edgewater/"><h3>Edgewater</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/elmwood-park/"><h3>Elmwood Park</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/emerson/"><h3>Emerson</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/englewood/"><h3>Englewood</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/englewood-cliffs/"><h3>Englewood Cliffs</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/fair-lawn/"><h3>Fair Lawn</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/fairview/"><h3>Fairview</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/fort-lee/"><h3>Fort Lee</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/franklin-lakes/"><h3>Franklin Lakes</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/garfield/"><h3>Garfield</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/glen-rock/"><h3>Glen Rock</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/hackensack/"><h3>Hackensack</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/harrington-park/"><h3>Harrington Park</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/hasbrouck-heights/"><h3>Hasbrouck Heights</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/haworth/"><h3>Haworth</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/hillsdale/"><h3>Hillsdale</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/ho-ho-kus/"><h3>Ho-Ho-Kus</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/leonia/"><h3>Leonia</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/little-ferry/"><h3>Little Ferry</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/lodi/"><h3>Lodi</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/lyndhurst/"><h3>Lyndhurst</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/mahwah/"><h3>Mahwah</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/maywood/"><h3>Maywood</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/midland-park/"><h3>Midland Park</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/montvale/"><h3>Montvale</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/moonachie/"><h3>Moonachie</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/new-milford/"><h3>New Milford</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/north-arlington/"><h3>North Arlington</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/northvale/"><h3>Northvale</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/norwood/"><h3>Norwood</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/oakland/"><h3>Oakland</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/old-tappan/"><h3>Old Tappan</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/oradell/"><h3>Oradell</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/palisades-park/"><h3>Palisades Park</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/paramus/"><h3>Paramus</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/park-ridge/"><h3>Park Ridge</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/ramsey/"><h3>Ramsey</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/ridgefield/"><h3>Ridgefield</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/ridgefield-park/"><h3>Ridgefield Park</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/ridgewood/"><h3>Ridgewood</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/river-edge/"><h3>River Edge</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/river-vale/"><h3>River Vale</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/rochelle-park/"><h3>Rochelle Park</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/rockleigh/"><h3>Rockleigh</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/rutherford/"><h3>Rutherford</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/saddle-brook/"><h3>Saddle Brook</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/saddle-river/"><h3>Saddle River</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/south-hackensack/"><h3>South Hackensack</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/teaneck/"><h3>Teaneck</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/tenafly/"><h3>Tenafly</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/teterboro/"><h3>Teterboro</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/upper-saddle-river/"><h3>Upper Saddle River</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/waldwick/"><h3>Waldwick</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/wallington/"><h3>Wallington</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/washington-township/"><h3>Washington Township</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/westwood/"><h3>Westwood</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/woodcliff-lake/"><h3>Woodcliff Lake</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/wood-ridge/"><h3>Wood-Ridge</h3></a></li>
+                                <li><a href="https://boschbergencounty.com/nj/wyckoff/"><h3>Wyckoff</h3></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="cf-schedule-container">
+                <div class="cf-schedule-text">Schedule Your Bosch Repair Online</div>
+                <button class="cf-book-button" id="cfBookButton">Book Online</button>
+                <button class="form-call-now" id="formCallNow">Call Now</button>
+                <div class="cf-contact-form-section" id="cfContactFormSection">
+                    <p class="expect-text">What to Expect: Once you submit your request, a representative will contact you within 30 minutes...</p>
+                    <form id="cfContactForm" class="cf-contact-form">
+                        <div class="cf-form-group"><label for="cfName">Name *</label><input type="text" id="cfName" name="from_name" placeholder="John Doe" required></div>
+                        <div class="cf-form-group"><label for="cfEmail">Email *</label><input type="email" id="cfEmail" name="user_email" placeholder="john@example.com" required></div>
+                        <div class="cf-form-group"><label for="cfPhone">Phone *</label><input type="tel" id="cfPhone" name="phone" placeholder="1234567890" required pattern="[0-9]{10}"></div>
+                        <div class="cf-form-group"><label for="cfAddress">Address *</label><textarea id="cfAddress" name="address" placeholder="123 Main St, Ridgewood, NJ 07450" required></textarea></div>
+                        <div class="cf-form-group"><label for="cfMessage">Describe the Problem & Appliance Type *</label><textarea id="cfMessage" name="message" placeholder="Please describe the issue and specify the appliance type (e.g., Bosch Refrigerator, Bosch Washer, etc.)" required></textarea></div>
+                        <button type="submit" class="cf-form-button">Send Request</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </section>
+    <div class="cf-modal-overlay" id="cfModalOverlay"></div>
+    <div class="cf-success-modal" id="cfSuccessModal">
+        <div class="cf-success-content">
+            <p id="successMessage">Your request has been sent.<br>A Bosch technician will contact you within 30 minutes!</p>
+            <button class="cf-close-modal" id="cfCloseModal">Close</button>
+        </div>
+    </div>
     </main>
     <footer>
         <div class="footer-main">
@@ -832,10 +1309,13 @@
             const dropdownCloseBtn = document.getElementById('dropdownCloseBtn');
             const additionalToggle = document.getElementById('additionalToggle');
             const additionalSubmenu = document.getElementById('additionalSubmenu');
+            const serviceAreasToggle = document.getElementById('serviceAreasToggle');
+            const serviceAreasSubmenu = document.getElementById('serviceAreasSubmenu');
             
             function closeDropdown() {
                 if (servicesMenu) servicesMenu.classList.remove('active');
                 if (additionalSubmenu) additionalSubmenu.style.maxHeight = '0';
+                if (serviceAreasSubmenu) serviceAreasSubmenu.style.maxHeight = '0';
             }
             
             if (servicesToggle) {
@@ -863,7 +1343,32 @@
                 });
             }
             
+            if (serviceAreasToggle && serviceAreasSubmenu) {
+                serviceAreasToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (serviceAreasSubmenu.style.maxHeight && serviceAreasSubmenu.style.maxHeight !== '0px') {
+                        serviceAreasSubmenu.style.maxHeight = '0';
+                    } else {
+                        serviceAreasSubmenu.style.maxHeight = serviceAreasSubmenu.scrollHeight + 'px';
+                    }
+                });
+            }
+            
             document.addEventListener('click', closeDropdown);
+            
+            // Service Areas section toggle
+            const saToggle = document.getElementById('saToggleBtn');
+            const saContent = document.getElementById('saDropdownContent');
+            
+            if (saToggle && saContent) {
+                saToggle.addEventListener('click', function() {
+                    if (saContent.style.maxHeight && saContent.style.maxHeight !== '0px') {
+                        saContent.style.maxHeight = '0';
+                    } else {
+                        saContent.style.maxHeight = saContent.scrollHeight + 'px';
+                    }
+                });
+            }
             
             const services = document.querySelectorAll('.service');
             services.forEach(function(service) {
@@ -880,6 +1385,14 @@
                     this.classList.toggle('active');
                 });
             });
+            
+            // Contact form toggle
+            const cfBookButton = document.getElementById('cfBookButton');
+            if (cfBookButton) {
+                cfBookButton.addEventListener('click', function() {
+                    document.getElementById('cfContactFormSection').classList.toggle('active');
+                });
+            }
             
             function setupCallButton(btn) {
                 if (btn) {
@@ -898,7 +1411,53 @@
             }
             
             setupCallButton(document.getElementById('navCallNow'));
+            setupCallButton(document.getElementById('formCallNow'));
             setupCallButton(document.getElementById('heroCallNow'));
+            
+            // Contact form submission
+            const cfContactForm = document.getElementById('cfContactForm');
+            if (cfContactForm) {
+                cfContactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.user_email.value.trim();
+                    if (typeof emailjs !== 'undefined') {
+                        emailjs.sendForm('service_emxksio', 'template_tmexlql', this)
+                            .then(function() {
+                                cfContactForm.reset();
+                                document.getElementById('cfContactFormSection').classList.remove('active');
+                                document.getElementById('successMessage').innerHTML = '<strong>Thank you!</strong><br><br>Your request has been sent.<br><br>We will contact you at<br><strong>' + email + '</strong><br>within the next 30 minutes.';
+                                document.getElementById('cfSuccessModal').classList.add('active');
+                                document.getElementById('cfModalOverlay').classList.add('active');
+                            })
+                            .catch(function() {
+                                alert('Failed to send. Please try again or call us.');
+                            });
+                    } else {
+                        // Fallback if emailjs not loaded
+                        cfContactForm.reset();
+                        document.getElementById('cfContactFormSection').classList.remove('active');
+                        document.getElementById('successMessage').innerHTML = '<strong>Thank you!</strong><br><br>Your request has been sent.<br><br>We will contact you at<br><strong>' + email + '</strong><br>within the next 30 minutes.';
+                        document.getElementById('cfSuccessModal').classList.add('active');
+                        document.getElementById('cfModalOverlay').classList.add('active');
+                    }
+                });
+            }
+            
+            // Modal close
+            const cfCloseModal = document.getElementById('cfCloseModal');
+            if (cfCloseModal) {
+                cfCloseModal.onclick = function() {
+                    document.getElementById('cfSuccessModal').classList.remove('active');
+                    document.getElementById('cfModalOverlay').classList.remove('active');
+                };
+            }
+            
+            const cfModalOverlay = document.getElementById('cfModalOverlay');
+            if (cfModalOverlay) {
+                cfModalOverlay.onclick = function() {
+                    if (cfCloseModal) cfCloseModal.click();
+                };
+            }
         });
         
         function toggleService(btn) {
@@ -924,5 +1483,6 @@
             }
         }
     </script>
+    <script>var emailjs=function(e){"use strict";class t{constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0,t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"Network Error";this.status=e,this.text=t}}const i={origin:"https://api.emailjs.com",blockHeadless:!1,storageProvider:(()=>{if("undefined"!=typeof localStorage)return{get:e=>Promise.resolve(localStorage.getItem(e)),set:(e,t)=>Promise.resolve(localStorage.setItem(e,t)),remove:e=>Promise.resolve(localStorage.removeItem(e))}})()},r=e=>e?"string"==typeof e?{publicKey:e}:"[object Object]"===e.toString()?e:{}:{},o=function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"https://api.emailjs.com";if(!e)return;const o=r(e);i.publicKey=o.publicKey,i.blockHeadless=o.blockHeadless,i.storageProvider=o.storageProvider,i.blockList=o.blockList,i.limitRate=o.limitRate,i.origin=o.origin||t},a=async function(e,r){let o=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const a=await fetch(i.origin+e,{method:"POST",headers:o,body:r}),s=await a.text(),n=new t(a.status,s);if(a.ok)return n;throw n},s=(e,t,i)=>{if(!e||"string"!=typeof e)throw"The public key is required. Visit https://dashboard.emailjs.com/admin/account";if(!t||"string"!=typeof t)throw"The service ID is required. Visit https://dashboard.emailjs.com/admin";if(!i||"string"!=typeof i)throw"The template ID is required. Visit https://dashboard.emailjs.com/admin/templates"},n=e=>e.webdriver||!e.languages||0===e.languages.length,l=()=>new t(451,"Unavailable For Headless Browser"),c=(e,t)=>{if((e=>!e.list?.length||!e.watchVariable)(e))return!1;((e,t)=>{if(!Array.isArray(e))throw"The BlockList list has to be an array";if("string"!=typeof t)throw"The BlockList watchVariable has to be a string"})(e.list,e.watchVariable);const i=(r=t,o=e.watchVariable,r instanceof FormData?r.get(o):r[o]);var r,o;return"string"==typeof i&&e.list.includes(i)},d=()=>new t(403,"Forbidden"),m=async(e,t,i)=>{if(!t.throttle||!i)return!1;((e,t)=>{if("number"!=typeof e||e<0)throw"The LimitRate throttle has to be a positive number";if(t&&"string"!=typeof t)throw"The LimitRate ID has to be a non-empty string"})(t.throttle,t.id);const r=t.id||e,o=await(async(e,t,i)=>{const r=Number(await i.get(e)||0);return t-Date.now()+r})(r,t.throttle,i);return o>0||(await i.set(r,Date.now().toString()),!1)},h=()=>new t(429,"Too Many Requests"),p=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=u.storageProvider||i.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());if(s(b,e,t),(e=>{if(e&&"[object Object]"!==e.toString())throw"The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/"})(o),o&&c(w,o))return Promise.reject(d());if(await m(location.pathname,y,f))return Promise.reject(h());const v={lib_version:"4.4.1",user_id:b,service_id:e,template_id:t,template_params:o};return a("/api/v1.0/email/send",JSON.stringify(v),{"Content-type":"application/json"})},u=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=i.storageProvider||u.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());const v=(e=>"string"==typeof e?document.querySelector(e):e)(o);s(b,e,t),(e=>{if(!e||"FORM"!==e.nodeName)throw"The 3rd parameter is expected to be the HTML form element or the style selector of the form"})(v);const j=new FormData(v);return c(w,j)?Promise.reject(d()):await m(location.pathname,y,f)?Promise.reject(h()):(j.append("lib_version","4.4.1"),j.append("service_id",e),j.append("template_id",t),j.append("user_id",b),a("/api/v1.0/email/send-form",j))};var b={init:o,send:p,sendForm:u,EmailJSResponseStatus:t};return e.EmailJSResponseStatus=t,e.default=b,e.init=o,e.send=p,e.sendForm=u,Object.defineProperty(e,"__esModule",{value:!0}),e}({});emailjs.init({publicKey:'zfCrLmZU8eK9CuZcs'});</script>
 </body>
 </html>
